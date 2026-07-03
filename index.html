@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SW</title>
+    <title>My Site</title>
+    <meta name="theme-color" content="#ffffff">
+    <link rel="modulepreload" href="https://esm.sh/three@0.161.0">
+    <link rel="modulepreload" href="scripts/sketch5.js">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/clker-free-vector-images-circle-39475.svg">
+
+    <style>
+        #loading{
+        position:fixed;
+        inset:0;
+        background:white;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        z-index:99999;
+        transition:opacity 1.2s ease;
+        }
+
+        .spinner{
+        width:70px;
+        height:70px;
+        border:6px solid rgba(0,0,0,.15);
+        border-top-color:black;
+        border-radius:50%;
+        animation:spin .8s linear infinite;
+        }
+
+        @keyframes spin{
+        to{
+            transform:rotate(360deg);
+        }
+        }
+        </style>
 </head>
 
 <body>
-    
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
 
-    <script type="module" src="scripts/sketch4.js"></script>
+    <script type="module" src="scripts/sketch5.js"></script>
       
       
 </body>

@@ -133,7 +133,7 @@ document.body.appendChild(renderer.domElement);
       camera,
       renderer.domElement
     );
-
+  controls.enablePan = false;
   controls.enableDamping =
     true;
 

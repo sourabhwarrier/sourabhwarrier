@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-``
 <html>
 <head>
     <title>SW</title>
     <meta name="theme-color" content="#ffffff">
-    <link rel="modulepreload" href="https://esm.sh/three@0.161.0">
-    <link rel="modulepreload" href="scripts/sketch5.js">
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "./libs/three/build/three.module.js"
+          }
+        }
+        </script>
+    <link rel="modulepreload" href="/libs/three/build/three.module.js">
+   <!--  <link rel="modulepreload" href="https://esm.sh/three@0.161.0"> -->
+    <link rel="modulepreload" href="/scripts/sketch6.js">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="/assets/clker-free-vector-images-circle-39475.svg">
-    <!-- ignore this comment - was placed here for stupid reasons-->
-    <!-- ignore this comment - was placed here for stupid reasons-->
+    <link rel="icon" type="image/svg+xml" href="assets/clker-free-vector-images-circle-39475.svg">
+
     <style>
         #loading{
         position:fixed;
@@ -44,7 +50,7 @@
         <div class="spinner"></div>
     </div>
 
-    <script type="module" src="scripts/sketch5.js"></script>
+    <script type="module" src="scripts/sketch6.js"></script>
       
       
 </body>

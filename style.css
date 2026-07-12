@@ -1,11 +1,235 @@
-html,
+
+:root {
+    --link-color: #0000FF;   /* navigation links */
+    --nav-toggle-color: black; /* that toggle thingy */
+    --text-color: #111111;      /* normal text */
+    --background-color: #FAEFD9;  /* page background */
+}
+/*#FAEFD9*/
+/* ===== Main page ===== */
+
 body {
-    margin: 0;
-    padding: 0;
-    background: white;
+    max-width: 1100px;
+    width: 90%;
+    margin: 40px auto;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+
+
+
+/* ===== Navigation ===== */
+
+.academic-nav {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links .current {
+    color: var(--text-color);
+    cursor: default;
+}
+
+.nav-toggle {
+    background: none;
+    border: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+
+    color: var(--nav-toggle-color);
+
+    cursor: pointer;
+    display: none;
+}
+
+/* helps smooth bootstrap collapse */
+
+#navCollapse {
     overflow: hidden;
 }
 
-canvas {
-    display: block;
+/* mobile */
+
+@media (max-width: 768px) {
+
+    .nav-toggle {
+        display: inline;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+/* desktop: always visible */
+
+@media (min-width: 769px) {
+
+    #navCollapse {
+        display: block !important;
+        height: auto !important;
+    }
+
+}
+
+
+
+
+/* ===== Content ===== */
+
+h2 {
+    font-weight: normal;
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* ===== Footer ===== */
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+}
+
+
+/* full viewport centered block */
+
+.hero-center-fv {
+    min-height: 70vh;          /* occupy most of screen height */
+    
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;  /* vertical centering */
+    align-items: center;      /* horizontal centering */
+
+    text-align: center;
+}
+
+/*Just centered block*/
+.hero-center {
+    align-items: center;      /* horizontal centering */
+    text-align: center;
+}
+
+/* tighten spacing between stacked headings */
+
+.hero-center-fv h2 {
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* separate styling for hero links */
+
+.hero-link {
+    color: black;
+    text-decoration: none;
+}
+
+.hero-link:hover {
+    text-decoration: underline;
+}
+
+/* separate styling for classic links */
+
+.classic-link {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+.classic-link:hover {
+    text-decoration: underline;
+}
+
+/* Red for other stuff*/
+/*#961300*/
+.classic-red {
+    color: #222222;
+    text-decoration: none;
+}
+
+/* full viewport standard block */
+
+.full-viewport {
+    min-height: 70vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* half width para */
+
+.half-para {
+    width: 50vw;
+}
+
+/* ===== 2-column responsive layout ===== */
+
+.layout-2col {
+    margin-top: 20px;
+    /*margin-bottom: 20px;*/
+    display: flex;
+    gap: 30px;
+}
+
+.layout-2col > .col {
+    width: 50%;
+}
+
+/* switch to vertical flow on phone */
+@media (max-width: 768px) {
+
+    .layout-2col {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .layout-2col > .col {
+        width: 100%;
+    }
+
+}
+
+/*3 sections*/
+.layout-3col {
+    display: flex;
+}
+  
+.layout-3col > .col {
+    width: 33.333%;
 }
